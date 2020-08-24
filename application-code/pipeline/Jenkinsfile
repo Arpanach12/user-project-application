@@ -1,7 +1,6 @@
 node {
  
-  registry = ""
-     registryCredential = 'dockerhubid'
+  
 	
  
  stage('Git-Checkout') {
