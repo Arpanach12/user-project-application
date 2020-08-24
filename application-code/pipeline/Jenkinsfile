@@ -1,7 +1,7 @@
 node {
  
- def registry = "devops311/useranchore"
-   def  registryCredential = 'dockerhubid'
+  registry = ""
+     registryCredential = 'dockerhubid'
 	
  
  stage('Git-Checkout') {
@@ -42,9 +42,9 @@ node {
    
      docker.withRegistry( '', registryCredential ) {
          
-   sh 'docker tag  user_project_img devops311/useranchore'
+   sh 'docker tag  user_project_img:$BUILD_NUMBER devops311/useranchore:$BUILD_NUMBER'
              
-        sh 'docker push devops311/useranchore'
+        sh 'docker push $registry:$BUILD_NUMBER'
          
      }
   }
