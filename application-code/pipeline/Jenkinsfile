@@ -31,8 +31,8 @@ node {
   stage('Docker-Stage-Deployment') {
    
 	  
-    sh 'docker build -t user_project_img:$BUILD_NUMBER . '
-   sh ' docker run -d -p 8082:8080  --name user_project_container$BUILD_NUMBER user_project_img:$BUILD_NUMBER '
+    sh 'docker build -t user_projectimg:$BUILD_NUMBER . '
+   sh ' docker run -d -p 8081:8080  --name user_projectcontainer$BUILD_NUMBER user_projectimg:$BUILD_NUMBER '
     
   }
   
