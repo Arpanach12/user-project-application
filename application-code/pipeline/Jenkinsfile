@@ -1,7 +1,7 @@
 node {
  
-  registry = "devops311/useranchore"
-    registryCredential = 'dockerhubid'
+ def registry = "devops311/useranchore"
+   def  registryCredential = 'dockerhubid'
 	
  
  stage('Git-Checkout') {
